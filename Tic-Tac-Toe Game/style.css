@@ -1,0 +1,107 @@
+/* === Reset and Base Styling === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* === Fullscreen Body with Centered Content === */
+body {
+  background: linear-gradient(to bottom right, #a1c4fd, #c2e9fb); /* Soft gradient */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === Main Game Container === */
+.container {
+  background-color: #ffffffcc;       /* Frosted white background */
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 340px;
+}
+
+/* === Game Title === */
+h1 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* === Status Text Display === */
+.status {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #444;
+  font-weight: 500;
+}
+
+/* === Game Board Grid === */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);  /* 3x3 grid */
+  gap: 10px;
+  justify-content: center;
+}
+
+/* === Individual Cell Style === */
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* === Hover Effect for Cells === */
+.cell:hover {
+  background-color: #f0f8ff; /* Light hover color */
+}
+
+/* === Reset Button Style === */
+button {
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 1rem;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 119, 255, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+/* === Button Hover Color === */
+button:hover {
+  background-color: #005dcc;
+}
+
+/* === Responsive Design for Small Screens === */
+@media (max-width: 400px) {
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+}
